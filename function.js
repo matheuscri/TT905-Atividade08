@@ -1,4 +1,4 @@
-let url = "https://tt905-prog-web-matheus-cri.herokuapp.com/cantores"
+let url = "https://tt905-prog-web-matheus-cri.herokuapp.com/cantores/"
 
 async function callFetchWithGet(){
     let headers = new Headers();
@@ -11,14 +11,14 @@ async function callFetchWithGet(){
     const response = await fetch(url, options);
 
     if (response.status >= 200 && response.status <= 300){
-        console.log("Funcionou");
+        console.log("Funcionou/GET");
         output.innerHTML = await response.text();
     } else {
         console.log("Deu errado");
     }
 }
 
-async function callFetchWithPost(mensagem){
+async function callFetchWithPost(Cantor){
     const options = {
         method : 'POST',
         mode: 'cors',
@@ -27,7 +27,7 @@ async function callFetchWithPost(mensagem){
             'content-type' : 'application/json'
         },
         body :JSON.stringify({
-            'mensagem' : mensagem
+            'Cantor' : Cantor
         })
     }
     await fetch(url, options);
