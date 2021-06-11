@@ -18,7 +18,7 @@ async function callFetchWithGet(){
     }
 }
 
-async function callFetchWithPost(Cantor){
+async function callFetchWithPost(cantor){
     const options = {
         method : 'POST',
         mode: 'cors',
@@ -27,7 +27,7 @@ async function callFetchWithPost(Cantor){
             'content-type' : 'application/json'
         },
         body :JSON.stringify({
-            'Cantor' : Cantor
+            'Cantor' : cantor
         })
     }
     await fetch(url, options);
@@ -42,7 +42,7 @@ async function callFetchWithPut(id, novaMensagem){
             'content-type' : 'application/json'            
         }, 
         body :JSON.stringify({
-            'mensagem' : novaMensagem
+            'Cantor' : novaMensagem
         })
     }
     await fetch(`${url}${id}`, options);
