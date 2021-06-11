@@ -1,3 +1,5 @@
+let url = "https://tt905-prog-web-matheus-cri.herokuapp.com/cantores"
+
 async function callFetchWithGet(){
     let headers = new Headers();
     const options = {
