@@ -2,7 +2,7 @@
 *******************************Cantores********************************
 ************************************************************************/
 
-let url = "https://tt905-prog-web-matheus-cri.herokuapp.com/cantores/"
+// let url = "https://tt905-prog-web-matheus-cri.herokuapp.com/cantores/"
 
 async function callFetchWithGet(){
     let headers = new Headers();
@@ -105,7 +105,7 @@ async function callFetchWithGets1(){
         mode: 'cors',
         headers: headers
     }
-    const output = document.getElementByIds1("json");
+    const output = document.getElementById("json1");
     const response = await fetch(url, options);
 
     if (response.status >= 200 && response.status <= 300){
@@ -121,8 +121,8 @@ async function callFetchWithPosts1(musica){
         method : 'POST',
         mode: 'cors',
         headers: {
-            'Accept' : 'application/json',
-            'content-type' : 'application/json'
+            'Accept' : 'application/json1',
+            'content-type' : 'application/json1'
         },
         body :JSON.stringify({
             'Music' : musica
@@ -136,8 +136,8 @@ async function callFetchWithPuts1(id, novaMensagem){
         method : 'PUT',
         mode: 'cors',
         headers: {
-            'Accept' : 'application/json',
-            'content-type' : 'application/json'            
+            'Accept' : 'application/json1',
+            'content-type' : 'application/json1'            
         }, 
         body :JSON.stringify({
             'Music' : novaMensagem
@@ -151,8 +151,8 @@ async function callFetchWithDeletes1(id){
         method : 'DELETE',
         mode: 'cors',
         headers: {
-            'Accept' : 'application/json',
-            'content-type' : 'application/json' 
+            'Accept' : 'application/json1',
+            'content-type' : 'application/json1' 
         }
     }
     await fetch(`${url}${id}`, options);
@@ -167,7 +167,7 @@ function submitPosts1(){
     
     const form = document.forms['postForm'];    
     const mensagem = form["mensagem"].value;
-    callFetchWithPost(mensagem);
+    callFetchWithPosts1(mensagem);
     return false; // Evitar o reload da tela.
 }
 
@@ -175,13 +175,13 @@ function submitPuts1(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
     const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, mensagem);
+    callFetchWithPuts1(id, mensagem);
     return false; // Evitar o reload da tela.
 }
 
 function submitDeletes1(){
     const form = document.forms['deleteForm'];  
     const id = form["id"].value;  
-    callFetchWithDelete(id);
+    callFetchWithDeletes1(id);
     return false; // Evitar o reload da tela.
 }
