@@ -120,13 +120,13 @@ async function callFetchWithPosts1(musica){
     const options = {
         method : 'POST',
         mode: 'cors',
-        headers: {
+        headers: { //entender isso
             'Accept' : 'application/json1',
             'content-type' : 'application/json1'
         },
         body :JSON.stringify({
             'Music' : musica
-        })
+        })//até isso
     }
     await fetch(url, options);
 }
