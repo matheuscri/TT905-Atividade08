@@ -391,3 +391,15 @@ function submitGet(){
     callFetchWithGet();
     return false;
 }
+function submitGets1(){
+    callFetchWithGets1();
+    return false;
+}
+function submitGets2(){
+    callFetchWithGets2();
+    return false;
+}
+function submitGets3(){
+    callFetchWithGets3();
+    return false;
+}
