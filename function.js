@@ -125,13 +125,13 @@ async function callFetchWithPosts1(musica){
     const options = {
         method : 'POST',
         mode: 'cors',
-        headers: { //entender isso
+        headers: { 
             'Accept' : 'application/json',
             'content-type' : 'application/json'
         },
         body :JSON.stringify({
             'Music' : musica
-        })//até isso
+        })
     }
     //await fetch(url, options);
     await fetch(`${url}${'soundtrack/Tony_Hawk_American_Wasteland/'}`, options);
@@ -174,14 +174,14 @@ async function callFetchWithDeletes1(id){
 function submitPosts1(){
     console.log("entrei na função");
     
-    const form = document.forms['postForm'];    
+    const form = document.forms['postForms1'];    
     const mensagem = form["mensagem"].value;
     callFetchWithPosts1(mensagem);
     return false; // Evitar o reload da tela.
 }
 
 function submitPuts1(){
-    const form = document.forms['putForm'];  
+    const form = document.forms['putForms1'];  
     const id = form["id"].value;  
     const mensagem = form["mensagem"].value;
     callFetchWithPuts1(id, mensagem);
@@ -189,7 +189,7 @@ function submitPuts1(){
 }
 
 function submitDeletes1(){
-    const form = document.forms['deleteForm'];  
+    const form = document.forms['deleteForms1'];  
     const id = form["id"].value;  
     callFetchWithDeletes1(id);
     return false; // Evitar o reload da tela.
@@ -270,14 +270,14 @@ async function callFetchWithDeletes2(id){
 function submitPosts2(){
     console.log("entrei na função");
     
-    const form = document.forms['postForm'];    
+    const form = document.forms['postForms2'];    
     const mensagem = form["mensagem"].value;
     callFetchWithPosts2(mensagem);
     return false; // Evitar o reload da tela.
 }
 
 function submitPuts2(){
-    const form = document.forms['putForm'];  
+    const form = document.forms['putForms2'];  
     const id = form["id"].value;  
     const mensagem = form["mensagem"].value;
     callFetchWithPuts2(id, mensagem);
@@ -285,7 +285,7 @@ function submitPuts2(){
 }
 
 function submitDeletes2(){
-    const form = document.forms['deleteForm'];  
+    const form = document.forms['deleteForms2'];  
     const id = form["id"].value;  
     callFetchWithDeletes2(id);
     return false; // Evitar o reload da tela.
@@ -366,14 +366,14 @@ async function callFetchWithDeletes3(id){
 function submitPosts3(){
     console.log("entrei na função");
     
-    const form = document.forms['postForm'];    
+    const form = document.forms['postForms3'];    
     const mensagem = form["mensagem"].value;
     callFetchWithPosts3(mensagem);
     return false; // Evitar o reload da tela.
 }
 
 function submitPuts3(){
-    const form = document.forms['putForm'];  
+    const form = document.forms['putForms3'];  
     const id = form["id"].value;  
     const mensagem = form["mensagem"].value;
     callFetchWithPuts3(id, mensagem);
@@ -381,7 +381,7 @@ function submitPuts3(){
 }
 
 function submitDeletes3(){
-    const form = document.forms['deleteForm'];  
+    const form = document.forms['deleteForms3'];  
     const id = form["id"].value;  
     callFetchWithDeletes3(id);
     return false; // Evitar o reload da tela.
